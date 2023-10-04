@@ -1,0 +1,232 @@
+@import url('https://fonts.font.im/css?family=Libre+Barcode+39');
+@import url('https://fonts.font.im/css?family=Cinzel+Decorative');
+main-content > li, p {
+    line-height: 135%;
+    text-shadow: none !important;
+}
+.identity-card {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-areas:
+            "escutcheon smlogo smtxt . . smtime smtime"
+            "escutcheon smlogo smtxt . . . access"
+            "escutcheon smph smph smname smname smname smname"
+            "escutcheon smph smph affi affi affi affi"
+            "escutcheon smph smph alias alias alias alias"
+            "escutcheon smph smph smgend smreg smreg smreg"
+            "escutcheon smcode smcode contact . . smrank"
+            "escutcheon smbar smbar . . smlevel1 smlevel2"
+            "escutcheon hyperdep hyperdep . . smlevel1 smlevel2";
+    width: 54em;
+    height:36em;
+    padding: 0;
+    margin: auto 1rem;
+    border-radius: 2em;
+    border: 0.325em solid #000;
+    box-shadow: inset 2em 7em 0px 0 hsl(236.84deg 50.26% 37.06%);
+}
+.escu {
+    z-index: 1;
+    grid-area: escutcheon;
+    font-size: 300%;
+    font-weight: 900;
+    text-align: right;
+    writing-mode: vertical-lr;
+    margin-left: 0rem;
+    border-radius: 1.375rem 0 0 1.375rem;
+    padding-bottom: 1rem;
+    background: repeating-linear-gradient(-45deg,hsl(238.16deg 51.58% 37.25%),hsl(235deg 52.17% 36.08%) 20px,hsl(245.25deg 66.67% 23.53%) 0,hsl(245.25deg 66.67% 23.53%) 40px)!important;
+    color: #fff;
+    text-shadow: none !important;
+    width: 6rem;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 2px solid #fff;
+    font-family: 'Noto Sans SC';
+}
+.smlogo {
+    grid-area: smlogo;
+    background: url(http://arknights.wdfiles.com/local--files/component%3Amain-style/SamiFoundation.png) 50% 50% no-repeat;
+    background-size: 80%;
+    filter: invert(1);
+    display: flex;
+    height: 7em;
+    padding: 0 3em;
+    margin-left: 0rem;
+}
+ .smtxt {
+    grid-area: smtxt;
+    font-family: 'Cinzel', serif !important;
+    color: #fff;
+    font-size: 144%;
+    font-weight: 900;
+}
+ .smtime {
+    grid-area: smtime;
+    font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+    color: #fff;
+}
+ .smtime > p:before {
+    content: 'MEMBER SINCE: ';
+    font-family: 'Cinzel', serif !important;
+    color: #fff;
+    font-weight: 600;
+}
+.smaccess {
+    grid-area: access;
+    font-family: Microsoft YaHei;
+    color: #fff;
+    margin-top: -1em;
+}
+.smph {
+    grid-area: smph;
+    background: url(http://ark-logistics.wdfiles.com/local--files/file%3Asenioriousc/portrait) 50% 50% no-repeat;
+    background-size: 80%;
+}
+.smname {
+    grid-area: smname;
+    font-family: 'Cinzel Decorative';
+}
+.smname > p:before {
+    content: 'Name:\A';
+    white-space: pre;
+    font-family: 'Cinzel', serif !important;
+    color: #000;
+    font-weight: 600;
+}
+.affi {
+    grid-area: affi;
+    font-family: 'Cinzel Decorative';
+}
+ .affi > p:before {
+    content: 'Affiliation: \A';
+    white-space: pre;
+    font-family: 'Cinzel', serif !important;
+    color: #000;
+    font-weight: 600;
+}
+.alias {
+    grid-area: alias;
+    font-family: 'Cinzel Decorative';
+}
+ .alias > p:before {
+    content: 'Code Name: \A';
+    white-space: pre;
+    font-family: 'Cinzel', serif !important;
+    color: #000;
+    font-weight: 600;
+}
+.smgend {
+    grid-area: smgend;
+    font-family: 'Cinzel Decorative';
+}
+ .smgend > p:before {
+    content: 'Gender: \A';
+    white-space: pre;
+    font-family: 'Cinzel', serif !important;
+    color: #000;
+    font-weight: 600;
+}
+.smreg {
+    grid-area: smreg;
+    font-family: 'Cinzel Decorative';
+}
+ .smreg > p:before {
+    content: 'Region: \A';
+    white-space: pre;
+    font-family: 'Cinzel', serif !important;
+    color: #000;
+    font-weight: 600;
+}
+.smcode {
+    grid-area: smcode;
+    font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+    margin-left: 2em;
+    margin-top: -1.5rem;
+}
+ .smcode > p:before {
+    content: 'Code:\00A0';
+    white-space: pre;
+    font-family: 'Andale Mono', 'Courier New', Courier, monospace;
+    color: #000;
+    font-weight: 900;
+}
+.smbar {
+    grid-area: smbar;
+    font-family: 'Libre Barcode 39', cursive;
+    font-size: 100%;
+    transform: scaleX(2.3) scaleY(4.5) translateX(5.8em);
+    z-index: -2;
+}
+.smcontact {
+    grid-area: contact;
+    margin-bottom: -1.125rem;
+    font-family: 'Noto Sans SC';
+}
+ .smcontact > p:before {
+    content: 'Contact: \A';
+    white-space: pre;
+    font-family: 'Cinzel', serif !important;
+    color: #000;
+    font-weight: 600;
+}
+.smrank{
+    grid-area: smrank;
+    margin-bottom: -1rem;
+}
+ .smrank > p:before {
+    content: 'Rank:\A';
+    white-space: pre;
+    font-family: 'Noto SC', setif;
+    color: #000;
+    font-weight: 300;
+    font-style: italic;
+}
+ .smrank > p:after {
+    content: 'Access Level';
+    white-space: pre;
+    font-family: 'Noto SC', setif;
+    color: #000;
+    font-weight: 500;
+    margin-left: -8em;
+}
+.hyperdep {
+    grid-area: hyperdep;
+    margin-top: -4.6rem;
+    margin-left: 2em;
+}
+ .hyperdep > p:before {
+    content: 'Issue By:\00A0';
+    white-space: pre;
+    font-family: 'Noto SC', setif;
+    color: #000;
+    font-weight: 900;
+    font-style: italic;
+}
+.sml1 {
+    grid-area: smlevel1;
+    display: flex;
+    background: transparent;
+    border: 0.325em dashed #666;
+    width: 4.675rem;
+    height: 4.525rem;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.sml2{
+    grid-area: smlevel2;
+    display: flex;
+    background: #ffac00;
+    width: 5rem;
+    height: 5rem;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
